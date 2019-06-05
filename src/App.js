@@ -3,20 +3,51 @@ import './App.css';
 import List from './List';
 
 function App(props) {
-  // const test = (props.lists.map((list) => {
-  //   console.log('LIST', list)
-  //   for (prop in props.allCards) {
+
+  // const test = props.lists.map((list) => {
+    
+  //   for (let prop in props.allCards) {
   //   // gets each card
   //   const c = props.allCards[prop];
   //   if(list.cardIds.includes(c.id)) {
-  //             console.log(props.allCards[prop])
+  //     console.log(props.allCards[prop]);
   //   } 
   //   }
-  // }))
+    
+  // })
   
-  const listHeader = props.lists.map((list) => 
-    <List header = {list.header}></List>
-  )
+  const listHeader = props.lists.map((list) => {
+    // let testObj;
+    // let cardIdArray = list.cardIds.map (index => {
+    //   for (let prop in props.allCards) {
+        
+    //     if (index === props.allCards[prop].id) {
+    //       index = props.allCards[prop];
+    //     }
+    //   }
+      
+    //  })
+
+     
+    // for (let testProp in list.cardIds) {
+    //   let testID = list.cardIds[testProp];
+    // }
+    // let test;
+    //   for (let prop in props.allCards) {
+    //   // gets each card
+    //   const c = props.allCards[prop];
+    //   if(list.cardIds.includes(c.id)) {
+    //     test = props.allCards[prop];
+    //   }
+    // }
+  
+    return <List header = {list.header} cards = {list.cardIds.map (index => index)}></List>
+    
+    
+    
+    
+    
+  })
 
   // const cardID = props.allCards.map((index) => 
     

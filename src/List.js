@@ -1,16 +1,30 @@
 import React from 'react';
-// import Card from './Card';
+import STORE from './store';
+import Card from './Card';
 
+const StoreTest = STORE;
 function List(props) {
+    // const testArray = STORE.lists.map(each =>
+    //     <div className='List-cards'>
+    //         <Card title={props.cards} />
+    //     </div>
+    // )
+    // )
+    //    for (let prop in STORE.lists.cardIds) {
+    //         return <Card title = {props.cards[prop]} />
+    //     }
+    
+    
     return (
         <section className='List'>
+
             <header className='List-header'>
                 {props.header}
             </header>
-            {/* <div className='List-cards'>
-                <Card title={props.card} content={props.card}>
-                </Card>
-            </div> */}
+            <Card title={props.cards} />
+            <div className='List-cards'>
+                
+            </div>
         </section>
     )
 }

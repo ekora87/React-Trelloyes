@@ -18,15 +18,20 @@ function App(props) {
   
   const listHeader = props.lists.map((list) => {
     // let testObj;
-    // let cardIdArray = list.cardIds.map (index => {
-    //   for (let prop in props.allCards) {
-        
-    //     if (index === props.allCards[prop].id) {
-    //       index = props.allCards[prop];
-    //     }
-    //   }
+    let cardIdArray = list.cardIds.map (index => {
+      for (let prop in props.allCards) {
+        console.log("prop " + props.allCards[prop])
+        if (index === props.allCards[prop].id) {
+          for (let i=0; i<list.cardIds.length;i++) {
+            
+            list.cardIds[i] = props.allCards[prop];
+          }
+          
+          console.log(list.cardIds);
+        }
+      }
       
-    //  })
+     })
 
      
     // for (let testProp in list.cardIds) {
@@ -41,12 +46,7 @@ function App(props) {
     //   }
     // }
   
-    return <List header = {list.header} cards = {list.cardIds.map (index => index)}></List>
-    
-    
-    
-    
-    
+    return <List header = {list.header} cards = {list.cardIds}></List>
   })
 
   // const cardID = props.allCards.map((index) => 

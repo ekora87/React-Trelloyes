@@ -2,15 +2,12 @@ import React from 'react';
 import './Card.css';
 import STORE from './store';
 
-function Card(props) {
-      
-    
+export default function Card(props) {
     return (
         <div className = 'Card'>
-        <h3>{props.title}</h3>
-        <p>{props.content}</p>
+            <button type='button'>delete</button>
+            <h3>{props.title}</h3>
+            <p>{props.content}</p>
     </div> 
     )
 }
-
-export default Card;
